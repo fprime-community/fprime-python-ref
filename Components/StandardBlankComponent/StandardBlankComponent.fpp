@@ -1,6 +1,6 @@
 module Components {
     @ Component for F Prime FSW framework.
-    active component PythonComponent {
+    active component StandardBlankComponent {
 
         # One async command/port is required for active components
         # This should be overridden by the developers with a useful command/port
@@ -50,11 +50,11 @@ module Components {
         @ Port for sending telemetry channels to downlink
         telemetry port tlmOut
 
-        # @ Port to return the value of a parameter
-        # param get port prmGetOut
+        @ Port to return the value of a parameter
+        param get port prmGetOut
 
-        # @Port to set the value of a parameter
-        # param set port prmSetOut
+        @Port to set the value of a parameter
+        param set port prmSetOut
 
     }
 }

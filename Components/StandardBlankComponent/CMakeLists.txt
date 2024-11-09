@@ -11,8 +11,8 @@
 ####
 
 set(SOURCE_FILES
-  "${CMAKE_CURRENT_LIST_DIR}/PythonComponent.fpp"
-  # "${CMAKE_CURRENT_LIST_DIR}/PythonComponent.cpp"
+  "${CMAKE_CURRENT_LIST_DIR}/StandardBlankComponent.fpp"
+  "${CMAKE_CURRENT_LIST_DIR}/StandardBlankComponent.cpp"
 )
 
 # Uncomment and add any modules that this component depends on, else
@@ -23,17 +23,8 @@ set(SOURCE_FILES
 # `Ref/SignalGen/CMakeLists.txt` will be named `Ref_SignalGen`.  `Ref/SignalGen`
 # is an acceptable alternative and will be internally converted to `Ref_SignalGen`.
 #
-
-# add_library (pybind STATIC "${CMAKE_SOURCE_DIR}/fprime-python/cmake/target/pybind.cmake")
-set(MOD_DEPS
-    # Fw/Logger
-    # Svc/LinuxTime
-    # Communication Implementations
-    # Drv/Udp
-    # Drv/TcpClient
-    # pybind
-)
+# set(MOD_DEPS
+#   MyPackage_MyOtherModule
+# )
 
 register_fprime_module()
-# register_fprime_target("${CMAKE_CURRENT_SOURCE_DIR}/fprime-python/cmake/target/pybind.cmake")
-register_python_component("${CMAKE_BINARY_DIR}/Components/PythonComponent/PythonComponentComponentAi.xml" "${CMAKE_CURRENT_LIST_DIR}/PythonComponent.py")
