@@ -87,6 +87,16 @@ module TestDeployment {
     stack size Default.STACK_SIZE \
     priority 96
 
+  instance pythonComponent: Components.PythonComponent base id 0x1000 \
+    queue size Default.QUEUE_SIZE \
+    stack size Default.STACK_SIZE \
+    priority 99
+
+  instance standardBlankComponent: Components.StandardBlankComponent base id 0x1200 \
+    queue size Default.QUEUE_SIZE \
+    stack size Default.STACK_SIZE \
+    priority 99
+
   # ----------------------------------------------------------------------
   # Queued component instances
   # ----------------------------------------------------------------------

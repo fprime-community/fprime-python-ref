@@ -20,8 +20,8 @@ class PythonComponent(fprime_pybind.PythonComponentBase):
         pass # TODO: fill out custom constructing logic
 
     
-    def TODO_cmdHandler(self, opCode, cmdSeq):
-        """ Command handler for TODO """
-        self.cmdResponse_out(opCode, cmdSeq, Fw.CommandResponse.COMMAND_OK) # TODO: implement TODO
+    def SAY_HELLO_cmdHandler(self, opCode, cmdSeq, greeting):
+        """ Command handler for SAY_HELLO """
+        self.cmdResponse_out(opCode, cmdSeq, Fw.CommandResponse.COMMAND_OK) # TODO: implement SAY_HELLO
 
     

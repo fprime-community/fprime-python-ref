@@ -12,12 +12,11 @@ project(PPythonF3 C CXX)
 # This includes all of the F prime core components, and imports the make-system.
 ###
 include("${CMAKE_CURRENT_LIST_DIR}/fprime/cmake/FPrime.cmake")
-# message("FJKSERFKEFHESJFHKESFESKJ")
 register_fprime_target("${CMAKE_SOURCE_DIR}/fprime-python/cmake/target/pybind.cmake")
 # NOTE: register custom targets between these two lines
-# include("${CMAKE_CURRENT_LIST_DIR}/fprime-python/fprime-python.cmake")
-fprime_setup_included_code()
 
+fprime_setup_included_code()
+# include("${CMAKE_SOURCE_DIR}/fprime-python/fprime-python.cmake")
 
 
 # This includes project-wide objects

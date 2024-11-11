@@ -4,8 +4,17 @@ module Components {
 
         # One async command/port is required for active components
         # This should be overridden by the developers with a useful command/port
-        @ TODO
-        async command TODO opcode 0
+        async command SAY_HELLO(
+            greeting: string size 20
+        )
+
+        @Greeting event with maximum greeting length of 20 char
+        event Hello(
+            greeting: string size 20
+        ) severity activity high format "I say: {}"
+
+        @A count of number of greetings issued
+        telemetry GreetingCount: U32
 
         ##############################################################################
         #### Uncomment the following examples to start customizing your component ####

@@ -35,12 +35,11 @@ namespace Components {
       // Handler implementations for commands
       // ----------------------------------------------------------------------
 
-      //! Handler implementation for command TODO
-      //!
-      //! TODO
-      void TODO_cmdHandler(
+      //! Handler implementation for command SAY_HELLO
+      void SAY_HELLO_cmdHandler(
           FwOpcodeType opCode, //!< The opcode
-          U32 cmdSeq //!< The command sequence number
+          U32 cmdSeq, //!< The command sequence number
+          const Fw::CmdStringArg& greeting
       ) override;
 
   };

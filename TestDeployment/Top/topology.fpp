@@ -41,6 +41,9 @@ module TestDeployment {
     instance rateGroupDriver
     instance textLogger
     instance systemResources
+    
+    instance pythonComponent
+    instance standardBlankComponent
 
     # ----------------------------------------------------------------------
     # Pattern graph specifiers

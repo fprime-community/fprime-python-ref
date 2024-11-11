@@ -31,9 +31,10 @@ namespace Components {
   // ----------------------------------------------------------------------
 
   void StandardBlankComponent ::
-    TODO_cmdHandler(
+    SAY_HELLO_cmdHandler(
         FwOpcodeType opCode,
-        U32 cmdSeq
+        U32 cmdSeq,
+        const Fw::CmdStringArg& greeting
     )
   {
     // TODO

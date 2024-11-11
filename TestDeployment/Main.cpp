@@ -89,11 +89,11 @@ int main(int argc, char* argv[]) {
 
     // Setup, cycle, and teardown topology
     TestDeployment::setupTopology(inputs);
-    // FprimePy::FprimePython fprimePython = FprimePy::FprimePython();
-    // fprimePython.initialize();
+    FprimePy::FprimePython fprimePython = FprimePy::FprimePython();
+    fprimePython.initialize();
     TestDeployment::startSimulatedCycle(Fw::TimeInterval(1,0));  // Program loop cycling rate groups at 1Hz
     TestDeployment::teardownTopology(inputs);
-    // fprimePython.deinitalize();
+    fprimePython.deinitalize();
     (void)printf("Exiting...\n");
     return 0;
 }
