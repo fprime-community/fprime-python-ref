@@ -86,11 +86,12 @@ int main(int argc, char* argv[]) {
     signal(SIGINT, signalHandler);
     signal(SIGTERM, signalHandler);
     (void)printf("Hit Ctrl-C to quit\n");
-
-    // Setup, cycle, and teardown topology
-    TestDeployment::setupTopology(inputs);
     FprimePy::FprimePython fprimePython = FprimePy::FprimePython();
     fprimePython.initialize();
+    std::cout << "Fprime Before SetupTopology" << std::endl;
+    // Setup, cycle, and teardown topology
+    TestDeployment::setupTopology(inputs);
+
     TestDeployment::startSimulatedCycle(Fw::TimeInterval(1,0));  // Program loop cycling rate groups at 1Hz
     TestDeployment::teardownTopology(inputs);
     fprimePython.deinitalize();

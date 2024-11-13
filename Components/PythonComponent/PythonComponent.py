@@ -17,11 +17,18 @@ class PythonComponent(fprime_pybind.PythonComponentBase):
 
     def __init__(self):
         """ Constructor implementation """
+        self.m_greetingCount = 0
         pass # TODO: fill out custom constructing logic
 
     
     def SAY_HELLO_cmdHandler(self, opCode, cmdSeq, greeting):
         """ Command handler for SAY_HELLO """
-        self.cmdResponse_out(opCode, cmdSeq, Fw.CommandResponse.COMMAND_OK) # TODO: implement SAY_HELLO
+        eventGreeting = Fw.LogStringArg(eventGreeting)
+        self.log_ACTIVITY_HI_Hello(greeting)
+        
+        self.m_greetingCount += 1
+        self.tlmWrite_GreetingCount(self.m_greetingCount)
+        
+        self.cmdResponse_out(opCode, cmdSeq, Fw.CommandResponse.COMMAND_OK)
 
     
