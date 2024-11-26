@@ -23,12 +23,12 @@ class PythonComponent(fprime_pybind.PythonComponentBase):
     
     def SAY_HELLO_cmdHandler(self, opCode, cmdSeq, greeting):
         """ Command handler for SAY_HELLO """
-        eventGreeting = Fw.LogStringArg(eventGreeting)
-        self.log_ACTIVITY_HI_Hello(greeting)
+        eventGreeting = Fw.LogStringArg(greeting)
+        self.log_ACTIVITY_HI_Hello(eventGreeting)
         
         self.m_greetingCount += 1
         self.tlmWrite_GreetingCount(self.m_greetingCount)
         
-        self.cmdResponse_out(opCode, cmdSeq, Fw.CommandResponse.COMMAND_OK)
+        self.cmdResponse_out(opCode, cmdSeq, Fw.CmdResponse.COMMAND_OK)
 
     
