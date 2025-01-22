@@ -3,4 +3,4 @@
 	url = https://github.com/nasa/fprime.git
 [submodule "fprime-python"]
 	path = fprime-python
-	url = git@github.com:Lex-ari/fprime-python.git
+	url = git@github.com:fprime-community/fprime-python.git
