@@ -1,3 +1,6 @@
+> [!WARNING]
+> This repo has been superceded by: https://github.com/fprime-community/fprime-python-reference
+
 # PPythonF3 F' project
 
 This is a reference project showcasing Fprime-Python bindings in F' v3.5.x. Currently demonstrates the Hello World tutorial, more tutorials to come~
